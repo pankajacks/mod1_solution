@@ -6,7 +6,7 @@
     LunchCheckController.$inject = ['$scope'];
     function LunchCheckController($scope) {
         $scope.status = "";
-        $scope.meals = "item";
+        $scope.meals = "";
         $scope.checkIfTooMuch = function(){
             $scope.class_name = "green_border";
             $scope.text_color = "green_text_color";
