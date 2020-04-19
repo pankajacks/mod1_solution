@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch Check</title>
+    <style>
+        .red_border {
+            border: 2px solid red;
+        }
+
+        .green_border {
+            border: 2px solid green;
+        }
+
+        .red_text_color {
+            color:red;
+        }
+
+        .green_text_color {
+            color:green;
+        }
+    </style>
+</head>
+<body ng-app="LunchCheck">
+    <h1>Lunch Check</h1>
+    <div ng-controller="LunchCheckController">
+        <div>Enter Your Lunch items:</div>
+
+        <div class="{{class_name}}" style="display:inline-block; margin:5px 0;">
+            <input type="text" ng-model="meals"> 
+        </div><span>*:empty item Not Considered, i.e., ,</span> 
+
+        <div style="margin-top:8px;">
+            <input type="button" value="Check If Too Much"
+            ng-click="checkIfTooMuch()">
+        </div>
+
+        <div style="margin-top:8px; padding:5px;" class = "{{text_color}}">
+            {{status}}
+        </div>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
